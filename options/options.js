@@ -1,7 +1,8 @@
 export const globalOptions = {
-  name: "bilateralstimulatio-40820",
-  url: "https://bilateralstimulatio-40820.botics.co",
-  api: "https://bilateralstimulatio-40820.botics.co/api/v1"
+  "name": "bilateralstimulatio-40820",
+  "url": "https://bilateralstimulatio-40820.botics.co",
+  "api": "https://bilateralstimulatio-40820.botics.co/api/v1",
+  "initialRoute": "Untitled10"
 };
 export const modulesOptions = {
   "@modules/app-menu": {

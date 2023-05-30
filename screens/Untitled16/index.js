@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Picker } from 'react-native';
 
 const EditProfileScreen = () => {
+  const navigation = useNavigation();
   const [pushNotification, setPushNotification] = useState('0-24');
   const [hour, setHour] = useState('0');
   const [minute, setMinute] = useState('0');
@@ -43,7 +46,9 @@ const EditProfileScreen = () => {
           <Text style={styles.buttonText}>Terms and Conditions</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Change password</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("Untitled17");
+        }}><Text style={styles.buttonText}>Change password</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Invite Friends</Text>

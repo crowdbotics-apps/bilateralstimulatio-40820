@@ -22,7 +22,9 @@ const ProfileScreen = () => {
         </TouchableOpacity>
         <Text style={styles.profileName}>Profile Name</Text>
       </View></Pressable>
-      <View style={styles.formContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled10");
+    }}><View style={styles.formContainer}>
         <TextInput style={styles.input} placeholder="Full Name" value={fullName} onChangeText={setFullName} />
         <TextInput style={styles.input} placeholder="Email" value={email} onChangeText={setEmail} />
         <View style={styles.pickerContainer}>
@@ -35,7 +37,7 @@ const ProfileScreen = () => {
         <TouchableOpacity style={styles.saveButton}>
           <Text style={styles.buttonText}>Save</Text>
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.editButton}>
           <Text style={styles.buttonText}>Edit</Text>

@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 const OnboardingScreen = () => {
+  const navigation = useNavigation();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
@@ -30,7 +33,9 @@ const OnboardingScreen = () => {
         <Image source={{
         uri: slides[activeIndex].image
       }} style={styles.image} />
-        <Text style={styles.text}>{slides[activeIndex].text}</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled4");
+      }}><Text style={styles.text}>{slides[activeIndex].text}</Text></Pressable>
       </View>
       <View style={styles.buttonsContainer}>
         {activeIndex !== 0 && <TouchableOpacity style={styles.button} onPress={handlePrevious}>

@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
@@ -28,10 +29,10 @@ const Screen = () => {
   return <View style={_styles.JqlvDkwj}>
       <TextInput style={_styles.tfgKJxmG} onChangeText={handleSearch} value={searchText} placeholder="Search" />
       <Text style={_styles.qaHXMFxi}>List of Tones/Vibrations</Text>
-      {tones.map(tone => <View key={tone.id} style={_styles.MzOFvrUA}>
+      {tones.map(tone => <Pressable><View key={tone.id} style={_styles.MzOFvrUA}>
           <Image source={{
-        uri: tone.image
-      }} style={_styles.ENSuyQSJ} />
+          uri: tone.image
+        }} style={_styles.ENSuyQSJ} />
           <View>
             <Text style={_styles.PiCsjOKT}>{tone.title}</Text>
             <Text style={_styles.PdVkAYmv}>{tone.duration}</Text>
@@ -39,7 +40,7 @@ const Screen = () => {
               <Text style={_styles.rivKvWCp}>Play</Text>
             </TouchableOpacity>
           </View>
-        </View>)}
+        </View></Pressable>)}
     </View>;
 };
 

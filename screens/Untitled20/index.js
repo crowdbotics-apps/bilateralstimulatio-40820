@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 const SubscriptionScreen = () => {
+  const navigation = useNavigation();
   const [cardNumber, setCardNumber] = useState('');
   const [cvvNumber, setCvvNumber] = useState('');
   return <View style={styles.container}>
@@ -37,7 +40,9 @@ const SubscriptionScreen = () => {
         <Text style={styles.formLabel}>CVV Number</Text>
         <TextInput style={styles.formInput} value={cvvNumber} onChangeText={setCvvNumber} keyboardType="numeric" />
         <TouchableOpacity style={styles.payButton}>
-          <Text style={styles.payButtonText}>Pay</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("Untitled21");
+        }}><Text style={styles.payButtonText}>Pay</Text></Pressable>
         </TouchableOpacity>
       </View>
     </View>;

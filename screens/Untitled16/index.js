@@ -14,7 +14,9 @@ const EditProfileScreen = () => {
       </View>
       <View style={styles.content}>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Subscription</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("Untitled20");
+        }}><Text style={styles.buttonText}>Subscription</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Unsubscribe</Text>

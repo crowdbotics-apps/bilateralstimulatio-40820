@@ -1,18 +1,23 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 const BilateralScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
-      <View style={styles.header}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled11");
+    }}><View style={styles.header}>
         <Image source={{
-        uri: 'https://tinyurl.com/42evm3m3'
-      }} style={styles.logo} />
+          uri: 'https://tinyurl.com/42evm3m3'
+        }} style={styles.logo} />
         <Text style={styles.appName}>Bilateral</Text>
         <Image source={{
-        uri: 'https://tinyurl.com/42evm3m3'
-      }} style={styles.profilePic} />
+          uri: 'https://tinyurl.com/42evm3m3'
+        }} style={styles.profilePic} />
         <Text style={styles.userName}>John Doe</Text>
-      </View>
+      </View></Pressable>
       <View style={styles.content}>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Bilateral Music</Text>

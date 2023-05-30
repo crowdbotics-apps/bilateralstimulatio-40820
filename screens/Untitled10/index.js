@@ -41,7 +41,9 @@ const BilateralScreen = () => {
         </TouchableOpacity>
         <Text style={styles.quote}>Daily Motivational Quote</Text>
       </View></Pressable>
-      <View style={styles.bottomNav}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled14");
+    }}><View style={styles.bottomNav}>
         <TouchableOpacity style={styles.navButton}>
           <Text style={styles.navButtonText}>Home</Text>
         </TouchableOpacity>
@@ -51,7 +53,7 @@ const BilateralScreen = () => {
         <TouchableOpacity style={styles.navButton}>
           <Text style={styles.navButtonText}>Meatballs Menu</Text>
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
     </View>;
 };
 

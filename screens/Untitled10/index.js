@@ -48,7 +48,9 @@ const BilateralScreen = () => {
           <Text style={styles.navButtonText}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.navButton}>
-          <Text style={styles.navButtonText}>Community Chat</Text>
+          <Pressable onPress={() => {
+            navigation.navigate("Untitled15");
+          }}><Text style={styles.navButtonText}>Community Chat</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={styles.navButton}>
           <Text style={styles.navButtonText}>Meatballs Menu</Text>

@@ -51,11 +51,13 @@ const WelcomeScreen = () => {
           <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
       </View></Pressable>
-      <View style={styles.orContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled7");
+    }}><View style={styles.orContainer}>
         <View style={styles.line} />
         <Text style={styles.orText}>OR</Text>
         <View style={styles.line} />
-      </View>
+      </View></Pressable>
       <View style={styles.socialContainer}>
         <TouchableOpacity style={styles.socialButton}>
           <Text style={styles.socialButtonText}>Sign in via Google</Text>

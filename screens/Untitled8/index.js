@@ -1,22 +1,27 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Picker } from 'react-native';
 
 const ProfileScreen = () => {
+  const navigation = useNavigation();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [gender, setGender] = useState('Male');
   return <View style={styles.container}>
-      <View style={styles.profileContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled9");
+    }}><View style={styles.profileContainer}>
         <TouchableOpacity style={styles.profileImageContainer}>
           <Image source={{
-          uri: 'https://tinyurl.com/42evm3m3'
-        }} style={styles.profileImage} />
+            uri: 'https://tinyurl.com/42evm3m3'
+          }} style={styles.profileImage} />
           <View style={styles.addIconContainer}>
             <Text style={styles.addIcon}>+</Text>
           </View>
         </TouchableOpacity>
         <Text style={styles.profileName}>Profile Name</Text>
-      </View>
+      </View></Pressable>
       <View style={styles.formContainer}>
         <TextInput style={styles.input} placeholder="Full Name" value={fullName} onChangeText={setFullName} />
         <TextInput style={styles.input} placeholder="Email" value={email} onChangeText={setEmail} />

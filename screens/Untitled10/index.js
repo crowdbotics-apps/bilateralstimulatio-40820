@@ -18,27 +18,29 @@ const BilateralScreen = () => {
         }} style={styles.profilePic} />
         <Text style={styles.userName}>John Doe</Text>
       </View></Pressable>
-      <View style={styles.content}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled12");
+    }}><View style={styles.content}>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Bilateral Music</Text>
           <Image source={{
-          uri: 'https://tinyurl.com/42evm3m3'
-        }} style={styles.buttonImage} />
+            uri: 'https://tinyurl.com/42evm3m3'
+          }} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Bilateral Vibration</Text>
           <Image source={{
-          uri: 'https://tinyurl.com/42evm3m3'
-        }} style={styles.buttonImage} />
+            uri: 'https://tinyurl.com/42evm3m3'
+          }} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Vision Studio</Text>
           <Image source={{
-          uri: 'https://tinyurl.com/42evm3m3'
-        }} style={styles.buttonImage} />
+            uri: 'https://tinyurl.com/42evm3m3'
+          }} style={styles.buttonImage} />
         </TouchableOpacity>
         <Text style={styles.quote}>Daily Motivational Quote</Text>
-      </View>
+      </View></Pressable>
       <View style={styles.bottomNav}>
         <TouchableOpacity style={styles.navButton}>
           <Text style={styles.navButtonText}>Home</Text>

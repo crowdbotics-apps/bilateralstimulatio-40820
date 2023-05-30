@@ -56,7 +56,9 @@ const EditProfileScreen = () => {
         }}><Text style={styles.buttonText}>Invite Friends</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Send Feedback</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("Untitled19");
+        }}><Text style={styles.buttonText}>Send Feedback</Text></Pressable>
         </TouchableOpacity>
         <View style={styles.dropdownContainer}>
           <Text style={styles.dropdownLabel}>My preference</Text>

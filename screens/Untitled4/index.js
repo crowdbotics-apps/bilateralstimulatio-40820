@@ -30,7 +30,9 @@ const WelcomeScreen = () => {
           uri: 'https://tinyurl.com/42evm3m3'
         }} style={styles.logo} /></Pressable>
       </View>
-      <View style={styles.formContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled6");
+    }}><View style={styles.formContainer}>
         <View style={styles.inputContainer}>
           <TextInput style={styles.input} placeholder="Email" value={email} onChangeText={setEmail} />
         </View>
@@ -40,15 +42,15 @@ const WelcomeScreen = () => {
         <View style={styles.checkboxContainer}>
           <TouchableOpacity style={styles.checkbox} onPress={handleRememberMe}>
             {rememberMe && <Image source={{
-            uri: 'https://tinyurl.com/42evm3m3'
-          }} style={styles.checkboxIcon} />}
+              uri: 'https://tinyurl.com/42evm3m3'
+            }} style={styles.checkboxIcon} />}
           </TouchableOpacity>
           <Text style={styles.checkboxLabel}>I have read Terms and Conditions and Privacy Policy</Text>
         </View>
         <TouchableOpacity style={styles.button} onPress={handleSignUp}>
           <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
       <View style={styles.orContainer}>
         <View style={styles.line} />
         <Text style={styles.orText}>OR</Text>
